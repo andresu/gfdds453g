@@ -21,3 +21,5 @@ a {
 a:hover {
   background: #0CB8F2;
 }
+ul{list-style-type: none;}
+li{display:inline-block;}

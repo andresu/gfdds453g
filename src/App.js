@@ -5,12 +5,13 @@ import {Link} from 'react-router'
 export class App extends Component {
   render() {
     return (
-      <div>
-        <nav>
-          {/*Aca deben ir los links de navegacion*/}
-        </nav>
-        {/* Aca tienes que agreager algo para que las rutas funcionen*/}
-      </div>
+          <div>
+            <nav>
+                <li><Link to="/page1">Page 1</Link></li>
+                <li><Link to="/page2">Page 2</Link></li>
+            </nav>
+            {this.props.children}
+          </div> 
     )
   }
 }
@@ -21,18 +22,27 @@ export class App extends Component {
 
 export const Page1 = (props) => {
   return (
-    <h1>Pagina 1</h1>
+    <div>
+        <h1>Pagina 1</h1>  
+    </div>
+    
   )
 }
 
 export const Page2 = (props) => {
   return (
-    <h1>Pagina 2</h1>
+    <div>
+        <h1>Pagina 2</h1> 
+    </div>
+    
   )
 }
 
 export const NotFound = (props) => {
   return (
-    <h1>Pagina no encontrada</h1>
+    <div>
+        <h1>Pagina no encontrada</h1>   
+    </div>
+    
   )
 }
